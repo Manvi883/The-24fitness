@@ -1,0 +1,974 @@
+/* ===========================
+   24Fitness Homepage CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo h2{
+    color:#15803d;
+    font-size:32px;
+    font-weight:700;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#22C55E;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.login-btn,
+.admin-btn{
+    padding:12px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.login-btn{
+    border:2px solid #22C55E;
+    color:#15803d;
+}
+
+.login-btn:hover{
+    background:#22C55E;
+    color:#fff;
+}
+
+.admin-btn{
+    background:#22C55E;
+    color:#fff;
+}
+
+.admin-btn:hover{
+    background:#166534;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    min-height:90vh;
+}
+
+.left{
+    width:50%;
+}
+
+.badge{
+    display:inline-block;
+    background:#DCFCE7;
+    color:#166534;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.left h1{
+    font-size:60px;
+    color:#166534;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:19px;
+    color:#555;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.join-btn,
+.learn-btn{
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.join-btn{
+    background:#22C55E;
+    color:white;
+}
+
+.join-btn:hover{
+    background:#166534;
+}
+
+.learn-btn{
+    border:2px solid #22C55E;
+    color:#166534;
+}
+
+.learn-btn:hover{
+    background:#22C55E;
+    color:white;
+}
+
+.right{
+    width:40%;
+    text-align:center;
+}
+
+.right img{
+    width:100%;
+    max-width:420px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+/* ===========================
+   FEATURES SECTION
+=========================== */
+
+.features{
+    padding:90px 8%;
+    background:#f8fff9;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#166534;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    font-size:18px;
+    color:#666;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(34,197,94,.20);
+}
+
+.icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    font-size:25px;
+    color:#166534;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ===========================
+   MEMBERSHIP PLANS
+=========================== */
+
+#plans .feature-card{
+    border:2px solid transparent;
+}
+
+#plans .feature-card:hover{
+    border-color:#22C55E;
+}
+
+#plans h2{
+    margin:20px 0;
+    font-size:40px;
+}
+
+#plans p{
+    line-height:2;
+}
+
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+#about{
+    background:white;
+}
+
+#about p{
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+    font-size:18px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#166534;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#ddd;
+    margin-top:10px;
+}
+
+.footer .copyright{
+    margin-top:25px;
+    font-size:14px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:992px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .right{
+        margin-bottom:40px;
+    }
+
+    .left h1{
+        font-size:45px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .left h1{
+        font-size:35px;
+    }
+
+    .logo h2{
+        font-size:24px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .login-btn,
+    .admin-btn{
+        text-align:center;
+    }
+}
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+    padding:50px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.about .section-title{
+    margin-bottom:0;
+}
+
+.about h2{
+    font-size:42px;
+    color:#166534;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:800px;
+    margin:0 auto;
+    color:#555;
+    font-size:20px;
+    line-height:1.8;
+}
+/*==========================
+CONTACT PAGE
+===========================*/
+
+.contact-section{
+    padding:80px 8%;
+    background:#f8fff9;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:50px;
+    margin-top:50px;
+}
+
+.contact-info{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-info h3{
+    color:#166534;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.contact-info p{
+    margin:20px 0;
+    color:#555;
+    font-size:18px;
+}
+
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:16px;
+    background:#22C55E;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#166534;
+}
+
+@media(max-width:768px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+/*==========================
+CLIENT DASHBOARD
+===========================*/
+
+.dashboard{
+    padding:70px 8%;
+    background:#f8fff9;
+    min-height:80vh;
+}
+
+.welcome-card{
+    background:linear-gradient(135deg,#22C55E,#166534);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.welcome-card h1{
+    color:white;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.welcome-card p{
+    font-size:18px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.dashboard-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card h3{
+    color:#166534;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.dashboard-card p{
+    color:#555;
+    font-size:20px;
+    font-weight:bold;
+}
+/*==========================
+ADMIN DASHBOARD
+===========================*/
+
+.admin-dashboard{
+    padding:80px 8%;
+    background:#f8fff9;
+    min-height:80vh;
+}
+
+.admin-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.admin-header h1{
+    color:#166534;
+    font-size:46px;
+    margin-bottom:10px;
+}
+
+.admin-header p{
+    color:#555;
+    font-size:18px;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.admin-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.admin-card:hover{
+    transform:translateY(-8px);
+}
+
+.admin-card h3{
+    color:#166534;
+    margin-bottom:20px;
+}
+
+.admin-card h2{
+    color:#22C55E;
+    font-size:34px;
+}
+
+.recent-members{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.recent-members h2{
+    color:#166534;
+    margin-bottom:25px;
+}
+
+.recent-members table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.recent-members th{
+    background:#22C55E;
+    color:white;
+    padding:15px;
+}
+
+.recent-members td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.recent-members tr:hover{
+    background:#f4fff6;
+}
+/* Revenue Card */
+
+.earnings-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.earnings-card:hover{
+    transform:translateY(-8px);
+}
+
+.earnings-card h3{
+    color:#166534;
+    margin-bottom:25px;
+    text-align:center;
+    font-size:24px;
+}
+
+.earning-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #e5e7eb;
+    font-size:17px;
+}
+
+.earning-row:last-child{
+    border-bottom:none;
+}
+
+.earning-row span{
+    color:#555;
+    font-weight:500;
+}
+
+.earning-row strong{
+    color:#22C55E;
+    font-size:18px;
+}   
+/*==========================
+REVENUE SECTION
+===========================*/
+
+.revenue-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin:40px 0;
+}
+
+.revenue-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    border-top:5px solid #22C55E;
+}
+
+.revenue-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(34,197,94,.25);
+}
+
+.revenue-box h4{
+    color:#166534;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.revenue-box h2{
+    color:#22C55E;
+    font-size:32px;
+    font-weight:700;
+}
+/*==========================
+ADMIN PROFILE MENU
+===========================*/
+
+.admin-profile{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+}
+
+.admin-profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:3px solid #22C55E;
+}
+
+.profile-name span{
+    font-size:13px;
+    color:#777;
+}
+
+.profile-name h4{
+    color:#166534;
+    font-size:16px;
+    margin-top:3px;
+}
+
+.profile-menu{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:240px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    display:none;
+    overflow:hidden;
+    z-index:999;
+}
+
+.profile-menu a{
+    display:block;
+    padding:15px 20px;
+    text-decoration:none;
+    color:#333;
+    transition:.3s;
+}
+
+.profile-menu a:hover{
+    background:#22C55E;
+    color:white;
+}
+
+.profile-menu hr{
+    border:none;
+    border-top:1px solid #eee;
+}
+
+.admin-profile:hover .profile-menu{
+    display:block;
+}
+/*====================================
+        ADMIN DASHBOARD
+====================================*/
+
+.dashboard{
+    padding:60px 8%;
+    background:#f5faf7;
+}
+
+.dashboard h1{
+    font-size:42px;
+    color:#166534;
+    margin-bottom:10px;
+}
+
+.welcome{
+    color:#666;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stat-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.stat-card h3{
+    font-size:20px;
+    color:#166534;
+    margin-bottom:20px;
+}
+
+.stat-card h2{
+    color:#22C55E;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.table-section{
+    padding:20px 8% 80px;
+    background:#f5faf7;
+}
+
+.table-section h2{
+    color:#166534;
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.table-section table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.table-section th{
+    background:#22C55E;
+    color:#fff;
+    padding:18px;
+    text-align:left;
+}
+
+.table-section td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+.table-section tr:hover{
+    background:#f7fff8;
+}
+
+/*====================================
+        ADMIN PROFILE
+====================================*/
+
+.admin-profile{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+}
+
+.admin-profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:3px solid #22C55E;
+}
+
+.profile-name span{
+    display:block;
+    color:#777;
+    font-size:13px;
+}
+
+.profile-name h4{
+    color:#166534;
+    font-size:18px;
+}
+
+.profile-menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    right:0;
+    width:220px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    z-index:999;
+}
+
+.admin-profile:hover .profile-menu{
+    display:block;
+}
+
+.profile-menu a{
+    display:block;
+    padding:14px 20px;
+    text-decoration:none;
+    color:#333;
+    transition:.3s;
+}
+
+.profile-menu a:hover{
+    background:#22C55E;
+    color:#fff;
+}
+
+.profile-menu hr{
+    border:none;
+    border-top:1px solid #eee;
+}
+
+@media(max-width:1100px){
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.dashboard h1{
+font-size:32px;
+}
+
+} 
+.admin-profile img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #22C55E;
+}   
+/*==========================
+    MEMBERS PAGE
+===========================*/
+
+.edit-btn{
+    background:#22C55E;
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.edit-btn:hover{
+    background:#166534;
+}
